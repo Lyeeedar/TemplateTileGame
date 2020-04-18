@@ -11,6 +11,7 @@ android {
     compileSdkVersion(28)
     sourceSets {
         named("main") {
+	        java.srcDirs("src/", "../../game/android/src/")
             res.srcDir("res")
             assets.srcDir("../assets")
             jniLibs.srcDir("libs")

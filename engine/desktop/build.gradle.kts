@@ -3,9 +3,10 @@ plugins {
 }
 
 sourceSets {
-	val main by getting
-	main.java.srcDirs("src/", "../../game/desktop/src/")
-	main.resources.srcDirs("../assets")
+	main {
+		java.srcDirs("src/", "../../game/desktop/src/")
+		resources.srcDirs("../assets")
+	}
 }
 
 val assetsDir = file("../assets")

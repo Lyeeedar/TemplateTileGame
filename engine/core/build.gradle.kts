@@ -13,7 +13,7 @@ dependencies {
 
     implementation("com.badlogicgames.gdx:gdx:$gdxVersion")
 	implementation("com.badlogicgames.gdx:gdx-freetype:$gdxVersion")
-	
+
 	implementation("com.esotericsoftware:kryo:$kryoVersion")
 
     implementation("io.github.libktx:ktx-actors:$ktxVersion")
@@ -21,11 +21,11 @@ dependencies {
     implementation("io.github.libktx:ktx-collections:$ktxVersion")
     implementation("io.github.libktx:ktx-math:$ktxVersion")
     implementation("io.github.libktx:ktx-scene2d:$ktxVersion")
-	
+
 	implementation("com.squidpony:squidlib-util:$squidlibVersion")
-	
+
 	implementation("com.brsanthu:migbase64:2.2")
-	
+
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3")
 }
 
@@ -35,8 +35,9 @@ java {
 }
 
 sourceSets {
-	val main by getting
-	main.java.srcDirs("src/", "../../game/core/src/")
+	main {
+		java.srcDirs("src/", "../../game/game/src/")
+	}
 }
 
 tasks.rewriteSources {
