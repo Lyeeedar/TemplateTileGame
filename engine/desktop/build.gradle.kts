@@ -9,9 +9,6 @@ sourceSets {
 	}
 }
 
-val assetsDir = file("../assets")
-val mainClassName = "com.example.desktop.DesktopLauncher"
-
 dependencies {
     val gdxVersion: String by project
 
@@ -28,26 +25,28 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_7
 }
 
-// Use this task to run the game if IntelliJ run application configuration doesn't work.
-tasks.register<JavaExec>("run") {
-    main = mainClassName
-    classpath = sourceSets.main.get().runtimeClasspath
-    standardInput = System.`in`
-    workingDir = assetsDir
-    isIgnoreExitValue = true
-
-    if ("mac" in System.getProperty("os.name").toLowerCase()) {
-        jvmArgs("-XstartOnFirstThread")
-    }
-}
-
-// Use this task to create a fat jar.
 tasks.register<Jar>("dist") {
     from(files(sourceSets.main.get().output.classesDirs))
     from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
-    from(assetsDir)
+    from(file("../assets"))
 
     manifest {
-        attributes["Main-Class"] = mainClassName
+        attributes["Main-Class"] = "com.example.desktop.DesktopLauncher"
     }
+}
+
+tasks.register<JavaExec>("run") {
+	main = "com.example.desktop.DesktopLauncher"
+	classpath = sourceSets.main.get().runtimeClasspath
+	standardInput = System.`in`
+	workingDir = file("../assets")
+	isIgnoreExitValue = true
+
+	if ("mac" in System.getProperty("os.name").toLowerCase()) {
+		jvmArgs("-XstartOnFirstThread")
+	}
+}
+
+project.apply {
+	from("../../game/desktop/build.gradle.kts")
 }

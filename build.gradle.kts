@@ -1,34 +1,26 @@
 
-
 buildscript {
-	val appVersionCode by extra(1)
-	val appVersion by extra("1.0.0")
+	rootProject.apply(from = rootProject.file("engine/versions.gradle.kts"))
 
-	val kotlinVersion by extra("1.3.71")
-	val gdxVersion by extra("1.9.10")
-	val ktxVersion by extra("1.9.10-b5")
-	val junitVersion by extra("4.12")
-	val squidlibVersion by extra("3.0.0-b10")
-	val kryoVersion by extra("5.0.0-RC5")
+	repositories {
+		gradlePluginPortal()
+		google()
+	}
 
-    repositories {
-        gradlePluginPortal()
-        google()
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle:3.4.2")
-        classpath(kotlin("gradle-plugin", kotlinVersion))
-		classpath("com.lyeeedar.gradle-plugins:gradle-plugins")
-    }
+	dependencies {
+		"classpath"("com.android.tools.build:gradle:" + extra["androidToolsVersion"] as String)
+		"classpath"(kotlin("gradle-plugin", extra["kotlinVersion"] as String))
+		"classpath"("com.lyeeedar.gradle-plugins:gradle-plugins")
+	}
 }
 
 plugins {
-    base
+	base
 }
 
 allprojects {
-    repositories {
-        jcenter()
-        google()
-    }
+	repositories {
+		jcenter()
+		google()
+	}
 }
