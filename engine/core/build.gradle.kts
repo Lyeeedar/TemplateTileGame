@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+	java
 	id("com.lyeeedar.gradle-plugins.rewriteSources")
 }
 
@@ -30,13 +31,13 @@ dependencies {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_1_6
+    targetCompatibility = JavaVersion.VERSION_1_6
 }
 
 sourceSets {
 	main {
-		java.srcDirs("src/", "../../game/core/src/")
+		java.srcDirs("src/", "exp4j/src/main/java/", "../../game/core/src/")
 	}
 }
 
