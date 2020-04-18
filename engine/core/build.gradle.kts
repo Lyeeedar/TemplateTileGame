@@ -36,7 +36,7 @@ java {
 
 sourceSets {
 	main {
-		java.srcDirs("src/", "../../game/game/src/")
+		java.srcDirs("src/", "../../game/core/src/")
 	}
 }
 
@@ -46,4 +46,8 @@ tasks.rewriteSources {
 }
 tasks.compileKotlin {
 	dependsOn(tasks.rewriteSources)
+}
+
+project.apply {
+	from("../../game/core/build.gradle.kts")
 }
