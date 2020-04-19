@@ -13,7 +13,7 @@ android {
         named("main") {
 	        java.srcDirs("src/", "../../game/android/src/")
             res.srcDir("res")
-            assets.srcDir("../assets")
+            assets.srcDir("../../game/assets")
             jniLibs.srcDir("libs")
         }
     }

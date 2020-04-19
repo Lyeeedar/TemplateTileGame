@@ -38,7 +38,7 @@ open class SourceRewriterTask : DefaultTask()
 			println("Parsing source files")
 			val srcFiles = find(srcDirs!!)
 
-			val defsDir = File(srcDirs!!.first().absolutePath + "/../../../../assetsraw/Definitions/Generated").canonicalFile
+			val defsDir = File(srcDirs!!.first().absolutePath + "/../../../../../game/assetsraw/Definitions/Generated").canonicalFile
 
 			val classRegister = ClassRegister(srcFiles, defsDir)
 			classRegister.registerClasses()

@@ -5,7 +5,7 @@ plugins {
 sourceSets {
 	main {
 		java.srcDirs("src/", "../../game/desktop/src/")
-		resources.srcDirs("../assets")
+		resources.srcDirs("../../game/assets")
 	}
 }
 
@@ -18,6 +18,7 @@ dependencies {
 
     implementation("com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion")
     implementation("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop")
+	implementation("com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop")
 }
 
 java {
@@ -28,7 +29,7 @@ java {
 tasks.register<Jar>("dist") {
     from(files(sourceSets.main.get().output.classesDirs))
     from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
-    from(file("../assets"))
+    from(file("../../game/assets"))
 
     manifest {
         attributes["Main-Class"] = "com.example.desktop.DesktopLauncher"
@@ -39,7 +40,7 @@ tasks.register<JavaExec>("run") {
 	main = "com.example.desktop.DesktopLauncher"
 	classpath = sourceSets.main.get().runtimeClasspath
 	standardInput = System.`in`
-	workingDir = file("../assets")
+	workingDir = file("../../game/assets")
 	isIgnoreExitValue = true
 
 	if ("mac" in System.getProperty("os.name").toLowerCase()) {

@@ -5,7 +5,7 @@ plugins {
 sourceSets {
 	main {
 		java.srcDirs("src/", "../../game/headless/src/")
-		resources.srcDirs("../assets")
+		resources.srcDirs("../../game/assets")
 	}
 }
 
