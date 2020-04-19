@@ -12,5 +12,5 @@ fun newGame() {
 }
 
 fun load(): Boolean {
-	return true
+	return false
 }

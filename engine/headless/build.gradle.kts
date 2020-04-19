@@ -43,28 +43,28 @@ tasks.register<JavaExec>("compileResources") {
 	main = "com.lyeeedar.headless.CompilerRunner"
 	classpath = sourceSets.main.get().runtimeClasspath
 	standardInput = System.`in`
-	workingDir = file("../assets")
+	workingDir = file("../../game/assets")
 }
 
 tasks.register<JavaExec>("testResources") {
 	main = "com.lyeeedar.headless.AssetTester"
 	classpath = sourceSets.main.get().runtimeClasspath
 	standardInput = System.`in`
-	workingDir = file("../assets")
+	workingDir = file("../../game/assets")
 }
 
 tasks.register<JavaExec>("releaseAndroidToPlaystore") {
 	main = "com.lyeeedar.headless.AndroidRelease"
 	classpath = sourceSets.main.get().runtimeClasspath
 	standardInput = System.`in`
-	workingDir = file("../assets")
+	workingDir = file("../../game/assets")
 }
 
 tasks.register<JavaExec>("autoLocalise") {
 	main = "com.lyeeedar.headless.AutoLocaliser"
 	classpath = sourceSets.main.get().runtimeClasspath
 	standardInput = System.`in`
-	workingDir = file("../assets")
+	workingDir = file("../../game/assets")
 }
 
 project.apply {

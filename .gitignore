@@ -16,3 +16,8 @@ build/
 ## OS Specific
 .DS_Store
 Thumbs.db
+
+## Lyeeedar
+game/caches
+game/assets/CompressedData
+game/assetsraw/ProcessedPaths.xml

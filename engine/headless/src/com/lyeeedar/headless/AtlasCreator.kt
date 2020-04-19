@@ -51,7 +51,8 @@ class AtlasCreator
 		findFilesRecursive(File("../assetsraw").absoluteFile)
 
 		println(">>>>>> Parsing code <<<<<<<<")
-		parseCodeFilesRecursive(File("../../core/src").absoluteFile)
+		parseCodeFilesRecursive(File("../core/src").absoluteFile)
+		parseCodeFilesRecursive(File("../../engine/core/src").absoluteFile)
 
 		println("Parsing completed in ${System.currentTimeMillis() - start}")
 
