@@ -1,5 +1,3 @@
-rootProject.name = "template"
-
 include(":core")
 project(":core").projectDir = File("engine/core")
 
