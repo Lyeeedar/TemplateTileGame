@@ -1,5 +1,9 @@
 
 buildscript {
+	extra["appVersionCode"] = 1
+	extra["appVersion"] = "1.0.0"
+	extra["applicationId"] = "com.lyeeedar.template"
+
 	rootProject.apply(from = rootProject.file("engine/versions.gradle.kts"))
 
 	repositories {
