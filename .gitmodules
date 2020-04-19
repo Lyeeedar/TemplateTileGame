@@ -1,6 +1,3 @@
 [submodule "game/assetsraw/Sprites"]
 	path = game/assetsraw/Sprites
 	url = https://github.com/Lyeeedar/Sprites.git
-[submodule "engine/core/exp4j"]
-	path = engine/core/exp4j
-	url = https://github.com/Lyeeedar/exp4j.git
