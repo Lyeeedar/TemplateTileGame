@@ -1,3 +1,6 @@
 [submodule "game/assetsraw/Sprites"]
 	path = game/assetsraw/Sprites
 	url = https://github.com/Lyeeedar/Sprites.git
+[submodule "engine"]
+	path = engine
+	url = https://github.com/Lyeeedar/TileGameEngine.git
