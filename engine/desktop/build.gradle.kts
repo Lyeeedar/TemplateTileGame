@@ -16,7 +16,7 @@ dependencies {
 
     implementation(kotlin("stdlib"))
 
-    implementation("com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion")
+    implementation("com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion")
     implementation("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop")
 	implementation("com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop")
 }
@@ -32,12 +32,12 @@ tasks.register<Jar>("dist") {
     from(file("../../game/assets"))
 
     manifest {
-        attributes["Main-Class"] = "com.example.desktop.DesktopLauncher"
+        attributes["Main-Class"] = "com.lyeeedar.desktop.DesktopLauncher"
     }
 }
 
 tasks.register<JavaExec>("run") {
-	main = "com.example.desktop.DesktopLauncher"
+	main = "com.lyeeedar.desktop.DesktopLauncher"
 	classpath = sourceSets.main.get().runtimeClasspath
 	standardInput = System.`in`
 	workingDir = file("../../game/assets")
