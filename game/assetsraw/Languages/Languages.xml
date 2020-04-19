@@ -1,0 +1,41 @@
+<Languages xmlns:meta="Editor">
+	<Language>
+		<Code>en</Code>
+		<Name>English</Name>
+		<Icon meta:RefKey="Sprite">
+			<Name>GUI/uk_flag</Name>
+		</Icon>
+	</Language>
+	<Language>
+		<Code>de</Code>
+		<Name>Deutsch</Name>
+		<Icon meta:RefKey="Sprite">
+			<Name>GUI/germany_flag</Name>
+		</Icon>
+		<IsAutoTranslated>true</IsAutoTranslated>
+	</Language>
+	<Language>
+		<Code>fr</Code>
+		<Name>Français </Name>
+		<Icon meta:RefKey="Sprite">
+			<Name>GUI/france_flag</Name>
+		</Icon>
+		<IsAutoTranslated>true</IsAutoTranslated>
+	</Language>
+	<Language>
+		<Code>it</Code>
+		<Name>Italiano</Name>
+		<Icon meta:RefKey="Sprite">
+			<Name>GUI/italy_flag</Name>
+		</Icon>
+		<IsAutoTranslated>true</IsAutoTranslated>
+	</Language>
+	<Language>
+		<Code>ru</Code>
+		<Name>русский</Name>
+		<Icon meta:RefKey="Sprite">
+			<Name>GUI/russia_flag</Name>
+		</Icon>
+		<IsAutoTranslated>true</IsAutoTranslated>
+	</Language>
+</Languages>
