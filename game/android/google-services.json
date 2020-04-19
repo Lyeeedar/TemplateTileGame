@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "162436256258",
+    "firebase_url": "https://templategame-515f9.firebaseio.com",
+    "project_id": "templategame-515f9",
+    "storage_bucket": "templategame-515f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162436256258:android:72fb7d9997a2e4fee60d1b",
+        "android_client_info": {
+          "package_name": "com.lyeeedar.template"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162436256258-95vkghbtuc3q5mp5epqdu0vrtv4cvi63.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpLsEZ8eRG82ZvubpjwRqRG1dQb3ADsZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162436256258-95vkghbtuc3q5mp5epqdu0vrtv4cvi63.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
