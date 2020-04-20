@@ -57,5 +57,5 @@ jobs:
     - name: Run Game Loop Test
       uses: reactivecircus/android-emulator-runner@v2
       with:
-        api-level: 28
+        api-level: 29
         script: ./Game/gradlew -p Game :headless:gameLoopTest
