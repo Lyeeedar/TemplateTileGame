@@ -25,7 +25,7 @@ jobs:
         path: PrivateStuff
 
     - name: Hash project contents
-      run: echo "::set-env name=PROJECT_HASH::${{ hashFiles('**/*.kt') }}-${{ hashFiles('**/*.xml') }}-${{ hashFiles('**/*.gradle') }}"
+      run: echo "::set-env name=PROJECT_HASH::${{ hashFiles('**/*.kt') }}-${{ hashFiles('**/*.xml') }}-${{ hashFiles('**/*.kts') }}"
 
     - name: Restore resource cache
       uses: actions/cache@v1
