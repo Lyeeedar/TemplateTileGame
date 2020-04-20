@@ -22,7 +22,7 @@ buildscript {
 
 		classpath("com.lyeeedar.gradle-plugins:gradle-plugins")
 
-		classpath("com.google.gms:google-services:4.2.0")
+		classpath("com.google.gms:google-services:4.3.3")
 		classpath("io.fabric.tools:gradle:1.31.2")
 		classpath("com.google.firebase:perf-plugin:1.3.1")
 	}
