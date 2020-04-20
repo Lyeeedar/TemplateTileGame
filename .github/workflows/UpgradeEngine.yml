@@ -5,7 +5,7 @@ on:
     - cron: '0 2 * * *'
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
     steps:
 
     - uses: actions/checkout@master
@@ -48,6 +48,13 @@ jobs:
         ./gradlew :desktop:build
         ./gradlew :android:assembleDebug
         ./gradlew :headless:testResources
+      if: steps.commit.outputs.status == 'Success'
+
+    - name: Run Game Loop Test
+      uses: reactivecircus/android-emulator-runner@v2
+      with:
+        api-level: 28
+        script: ./Game/gradlew -p Game :headless:gameLoopTest
       if: steps.commit.outputs.status == 'Success'
 
     - name: Push changes
