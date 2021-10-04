@@ -1,14 +1,14 @@
 package com.lyeeedar.Game
 
-import com.lyeeedar.ScreenEnum
+import com.lyeeedar.Screens.ScreenEnum
 import com.lyeeedar.Util.Settings
 import com.lyeeedar.Util.Statics
 
-fun save() {
+actual fun save() {
 
 }
 
-fun newGame() {
+actual fun newGame() {
 	Statics.settings = Settings()
 
 	Statics.game.switchScreen(ScreenEnum.EXAMPLE)
@@ -16,6 +16,6 @@ fun newGame() {
 	Statics.analytics.tutorialBegin()
 }
 
-fun load(): Boolean {
+actual fun load(): Boolean {
 	return false
 }
